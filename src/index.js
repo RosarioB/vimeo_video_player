@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Vimeo } from 'vimeo';
@@ -18,27 +19,32 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    client.request({
-      method:'get',
-      path: `/videos?query=${term}&page=1&per_page=5`
-    }, (error, body) => {
-      if (error) {
-        console.log('error');
-        console.log(error);
-      } else {
-        const videos = body.data;
-        this.setState({ 
-          videos: videos,
-          selectedVideo: videos[0]
-        });
-      }
-    });
+    if(term) {
+      console.log('Search term ' + term);
+      client.request({
+        method:'get',
+        path: `/videos?query=${term}&page=1&per_page=5`
+      }, (error, body) => {
+        if (error) {
+          console.log('error');
+          console.log(error);
+        } else {
+          const videos = body.data;
+          this.setState({ 
+            videos: videos,
+            selectedVideo: videos[0]
+          });
+        }
+      });
+    }
   }
 
   render() {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+
     return (
         <div>
-            <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
+            <SearchBar onSearchTermChange={videoSearch}/>
             <VideoDetail video={this.state.selectedVideo}/>
             <VideoList
               onVideoSelect={selectedVideo => this.setState({selectedVideo})} 
