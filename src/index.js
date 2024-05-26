@@ -20,7 +20,6 @@ class App extends Component {
 
   videoSearch(term) {
     if(term) {
-      console.log('Search term ' + term);
       client.request({
         method:'get',
         path: `/videos?query=${term}&page=1&per_page=5`
