@@ -9,3 +9,7 @@ Keep it private or gitignore the .env file before making the repository public.
 ## Run the server
 
 `npm start`
+
+### Vimeo library:
+
+https://github.com/vimeo/vimeo.js
