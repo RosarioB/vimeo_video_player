@@ -1,7 +1,7 @@
 # vimeo_video_player
 A basic Video player based on React that shows videos from Vimeo.
 
-![alt text](https://github.com/RosarioB/vimeo_video_player/main/githubimages/viemo_video_player.png?raw=true)
+![alt text](https://github.com/RosarioB/vimeo_video_player/main/github_images/vimeo_video_player.png?raw=true)
 
 ## Add .env file in the root with Vimeo API-key info:
 
