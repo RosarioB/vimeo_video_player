@@ -1,6 +1,9 @@
 # vimeo_video_player
+Add .env file in the root with Vimeo API-key info:
 
-Keep it private or gitignore the .env file before making the repository public.
+- CLIENT_ID
+- CLIENT_SECRET
+- ACCESS_TOKEN 
 
 ## Install dependencies
 
