@@ -20,3 +20,6 @@ A basic Video player based on React that shows videos from Vimeo.
 ### Vimeo library:
 
 https://github.com/vimeo/vimeo.js
+
+
+This code is adapted from the course [Ethereum and Solidity: The Complete Developer's Guide](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/?couponCode=24T6MT62024) by Stephen Grider, with some modifications.
